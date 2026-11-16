@@ -68,5 +68,3 @@ Beecrowd-Resolutions/
 | TypeScript 5.1 | 2 |
 
 ---
-
-*Atualizado automaticamente via Beecrowd Code Downloader.*
