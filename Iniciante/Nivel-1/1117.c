@@ -1,0 +1,88 @@
+/*
+ * Beecrowd | 1117 - Validação de Nota
+ * Categoria: Iniciante | Nível 1 | Assunto: Repetição
+ * Link: https://judge.beecrowd.com/pt/problems/view/1117
+ */
+
+/******************************************************************************
+
+
+
+Faça um programa que leia as notas referentes às duas avaliações de um aluno. Calcule e imprima a média semestral. Faça com que o algoritmo só aceite notas válidas (uma nota válida deve pertencer ao intervalo [0,10]). Cada nota deve ser validada separadamente.
+
+
+
+Entrada
+
+A entrada contém vários valores reais, positivos ou negativos. O programa deve ser encerrado quando forem lidas duas notas válidas.
+
+
+
+Saída
+
+Se uma nota inválida  for lida, deve ser impressa a mensagem "nota invalida".
+
+Quando duas notas válidas forem lidas, deve ser impressa a mensagem "media = " seguido do valor do cálculo. O valor deve ser apresentado com duas casas após o ponto decimal.
+
+
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+
+
+int main()
+
+{
+
+    //Variáveis
+
+    float nota = 0, notaInvalida = 0, notaValida = 0, media = 0, contador = 0, acumulador = 0;
+
+    //Entrada de Dados
+
+     while(1) {
+
+        scanf("%f", &nota); //lê uma nota que o usuário escrever
+
+        //Desenvolvimento de Dados e Saída de Dados
+
+                if(nota < 0.0 || nota > 10.0) { //SE FOR A NOTA HORROROSAMENTE ERRADA, INUTIL FUDIDO, FAÇA ISSO ABAIXO
+
+                    printf("nota invalida\n");
+
+                    notaInvalida = nota;
+
+                } else if(nota >= 0.0 && nota <= 10.0) {
+
+                    notaValida = nota;
+
+                    contador++;
+
+                    acumulador += nota;
+
+                    
+
+                    if(contador == 2) {
+
+                    media = (acumulador / 2);
+
+                    printf("media = %.2f\n", media);
+
+                    break;
+
+                    }
+
+                }
+
+     }
+
+    
+
+
+
+    return 0;
+
+}
+

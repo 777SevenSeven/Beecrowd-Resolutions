@@ -1,0 +1,55 @@
+/*
+ * Beecrowd | 2845 - Festa no Polo Norte
+ * Categoria: Iniciante | Nível 3 | Assunto: Desconhecido
+ * Link: https://judge.beecrowd.com/pt/problems/view/2845
+ */
+
+import java.util.*;
+
+
+
+public class Main {
+
+
+
+    public static void main(String[] args) {
+
+
+
+        Scanner in = new Scanner(System.in);
+
+
+
+        int n = in.nextInt();
+
+        int maior = 0;
+
+
+
+        for (int i = 0; i < n; i++) {
+
+
+
+            int x = in.nextInt();
+
+
+
+            if (x > maior) {
+
+                maior = x;
+
+            }
+
+        }
+
+
+
+        System.out.println(maior + 1);
+
+
+
+        in.close();
+
+    }
+
+}

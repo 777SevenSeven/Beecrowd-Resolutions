@@ -1,0 +1,49 @@
+/*
+ * Beecrowd | 1051 - Imposto de Renda
+ * Categoria: Iniciante | Nível 2 | Assunto: Seleção
+ * Link: https://judge.beecrowd.com/pt/problems/view/1051
+ */
+
+#include <stdio.h>
+
+
+
+int main() {
+
+    float salario = 0, imposto = 0.0;
+
+    scanf("%f", &salario);
+
+    
+
+    if (salario <= 2000.00) {
+
+        printf("Isento\n");
+
+    } else {
+
+        if (salario <= 3000.00) {
+
+            imposto = (salario - 2000.00) * 0.08;
+
+        } else if (salario <= 4500.00) {
+
+            imposto = (1000.00 * 0.08) + ((salario - 3000.00) * 0.18);
+
+        } else {
+
+            imposto = (1000.00 * 0.08) + (1500.00 * 0.18) + ((salario - 4500.00) * 0.28);
+
+        }
+
+
+
+        printf("R$ %.2f\n", imposto);
+
+    }
+
+
+
+    return 0;
+
+}
