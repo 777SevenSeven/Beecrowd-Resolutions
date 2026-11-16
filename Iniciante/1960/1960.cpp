@@ -1,0 +1,81 @@
+/******************************************************************************
+Você deve escrever um programa que, dado um número arábico, mostra seu equivalente na numeração romana.
+
+Lembre que I representa 1, V é 5, X é 10, L é 50, C é 100, D é 500 e M representa 1000.
+
+Entrada
+A entrada é um número inteiro positivo N (0 < N < 1000).
+
+Saída
+A saída é o número N escrito na numeração romana em uma única linha. Use sempre letras maiúsculas.
+*******************************************************************************/
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // Variáveis
+    int N = 0;
+    string numeracaoRomana;
+
+    // Entrada de Dados
+    cin >> N;
+
+    // Desenvolvimento de Dados
+    while(N > 0) {
+
+        if(N >= 900) {
+            numeracaoRomana += "CM";
+            N -= 900;
+        }
+        else if(N >= 500) {
+            numeracaoRomana += "D";
+            N -= 500;
+        }
+        else if(N >= 400) {
+            numeracaoRomana += "CD";
+            N -= 400;
+        }
+        else if(N >= 100) {
+            numeracaoRomana += "C";
+            N -= 100;
+        }
+        else if(N >= 90) {
+            numeracaoRomana += "XC";
+            N -= 90;
+        }
+        else if(N >= 50) {
+            numeracaoRomana += "L";
+            N -= 50;
+        }
+        else if(N >= 40) {
+            numeracaoRomana += "XL";
+            N -= 40;
+        }
+        else if(N >= 10) {
+            numeracaoRomana += "X";
+            N -= 10;
+        }
+        else if(N >= 9) {
+            numeracaoRomana += "IX";
+            N -= 9;
+        }
+        else if(N >= 5) {
+            numeracaoRomana += "V";
+            N -= 5;
+        }
+        else if(N >= 4) {
+            numeracaoRomana += "IV";
+            N -= 4;
+        }
+        else {
+            numeracaoRomana += "I";
+            N -= 1;
+        }
+    }
+
+    // Saída de Dados
+    cout << numeracaoRomana << endl;
+
+    return 0;
+}
